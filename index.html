@@ -12,7 +12,7 @@
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
-            
+            font-size: 18px;
         }
 
         .container {
@@ -21,31 +21,98 @@
             width: 80%;
             max-width: 1200px;
             padding: 20px;
+            justify-content: center; /* Center items horizontally */
         }
 
         .column {
             flex: 1;
             min-width: 0;
-            max-width: 400px;
             padding: 20px;
             text-align: justify;
             box-sizing: border-box;
         }
 
-        @media (max-width: 1024px) {
+        /* Large screens: 2 rows of 3 */
+        @media (min-width: 1025px) {
+            .column {
+                flex-basis: calc(33.333% - 40px); /* Roughly one-third width */
+                max-width: none;
+            }
+            /* Position the filler box in the second row, first column */
+            .container > .column:nth-child(1) { order: 1; }
+            .container > .column:nth-child(2) { order: 2; }
+            .container > .column:nth-child(3) { order: 3; }
+            .container > .column:nth-child(4) { order: 4; } /* Yellow box */
+            .container > .column:nth-child(5) { order: 5; }
+            .container > .column:nth-child(6) { order: 6; }
+        }
+
+        /* Medium screens: 3 rows of 2 */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .container {
+                align-items: flex-start; /* Align items to the top */
+            }
+            .column {
+                flex-basis: calc(50% - 40px); /* Roughly half width */
+                max-width: none;
+            }
+            /* Position the filler box in the second position */
+            .container > .column:nth-child(4) {
+                order: 2;
+            }
+            /* Ensure the original second box comes after the filler */
+            .container > .column:nth-child(2) {
+                order: 3;
+            }
+             /* Ensure the original third box comes after the filler */
+            .container > .column:nth-child(3) {
+                order: 4;
+            }
+             /* Ensure the original fifth box comes after the filler */
+            .container > .column:nth-child(5) {
+                order: 5;
+            }
+             /* Ensure the original sixth box comes after the filler */
+            .container > .column:nth-child(6) {
+                order: 6;
+            }
+        }
+
+        /* Small screens: Stacked */
+        @media (max-width: 768px) {
             body {
-                justify-content: center;
                 align-items: flex-start;
                 padding: 20px;
             }
+
             .container {
                 flex-direction: column;
-                width: 100%;
-                max-width: 800px; 
+                width: 80%;
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 20px;
             }
 
             .column {
                 width: 100%;
+                max-width: none;
+                order: 6; /* Place the filler at the bottom of the stack */
+            }
+            /* Ensure other columns are in their natural order */
+            .container > .column:nth-child(1) { order: 1; }
+            .container > .column:nth-child(2) { order: 2; }
+            .container > .column:nth-child(3) { order: 3; }
+            .container > .column:nth-child(5) { order: 4; }
+            .container > .column:nth-child(6) { order: 5; }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+            .column {
+                padding: 10px;
             }
         }
     </style>
@@ -56,10 +123,19 @@
             <p><i>Vienna Analytics</i></p>
         </div>
         <div class="column">
-            <p><i>Deploying AI is the most impactful action a company can take in our time. Adoption is essential to remain competitive. We engineer, and deploy AI systems that optimize performance and efficiency.</i></p>
+            <p><i>Deploying AI is the most impactful action a company can undertake in our time, offering transformative potential unseen since the advent of the internet. Adoption is no longer optional but essential for competitiveness; those who hesitate risk being outmaneuvered and becoming competitively irrelevant.</i></p>
         </div>
         <div class="column">
-            <p><i>We take on a small batch of clients each year and commit to producing extraordinary results. We offer two engagement types. A monthly subscription or a per project payment .</i></p>
+            <p><i>We are architects of the future of business, engineering and deploying AI systems delivering performance and efficiency. We engineer smarter operations and decision-making, future proofing your business systems. Our consultancy provides strategic guidance to companies looking to secure a competitive advantage.</i></p>
+        </div>
+        <div class="column">
+            <!-- This is the filler box -->
+        </div>
+        <div class="column">
+            <p><i>Our commitment to delivering truly exceptional outcomes necessitates a focused approach. By intentionally limiting the number of clients we partner with each year, we ensure that each engagement receives the undivided attention, dedicated resources, and deep expertise required to achieve extraordinary results.</i></p>
+        </div>
+        <div class="column">
+            <p><i>To best serve the diverse needs of our clients, we offer two distinct engagement models. Our Monthly Subscription provides ongoing access to our services on a recurring basis. Our Per-Project structure is perfect for engagements with well-defined objectives and deliverables.</i></p>
         </div>
     </div>
 </body>
