@@ -6,25 +6,61 @@
     <title>Vienna Analytics</title>
     <style>
         body {
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
-            text-align: left;
-            background-color: #f9f9f9;
+            box-sizing: border-box;
+            
         }
-        .content-wrapper {
-            max-width: 600px;
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            max-width: 1200px;
             padding: 20px;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 0;
+            max-width: 400px;
+            padding: 20px;
+            text-align: justify;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 1024px) {
+            body {
+                justify-content: center;
+                align-items: flex-start;
+                padding: 20px;
+            }
+            .container {
+                flex-direction: column;
+                width: 100%;
+                max-width: 800px; 
+            }
+
+            .column {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="content-wrapper">
-        <h1>Vienna Analytics</h1>
-        <a href="/contact">Contact</a>
-        <p>Deploying AI is the most impactful action a company can take in our time. Adoption is essential to remain competitive.<br><br>We consult on, engineer, and deploy AI systems that optimize performance and efficiency.<br><br>We take on a small batch of clients each year and commit to producing extraordinary results.<br><br>We offer two engagement types: a monthly subscription starting at €5,000 or a one-off payment per project starting at €25,000.<br><br>Adam Griffiths, Vienna Analytics.<br><br><i style="color: grey;">Update: We've begun work with selected clients and deployed state-of-the-art solutions. <a href="/work" style="color: grey;">Read more</a></i></p>
+    <div class="container">
+        <div class="column">
+            <p><i>Vienna Analytics</i></p>
+        </div>
+        <div class="column">
+            <p><i>Deploying AI is the most impactful action a company can take in our time. Adoption is essential to remain competitive. We engineer, and deploy AI systems that optimize performance and efficiency.</i></p>
+        </div>
+        <div class="column">
+            <p><i>We take on a small batch of clients each year and commit to producing extraordinary results. We offer two engagement types. A monthly subscription or a per project payment .</i></p>
+        </div>
     </div>
 </body>
 </html>
