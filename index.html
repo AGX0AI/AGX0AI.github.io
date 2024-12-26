@@ -14,106 +14,23 @@
             min-height: 100vh;
             box-sizing: border-box;
             font-size: 18px;
+            padding: 20px;
         }
 
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            width: 80%;
-            max-width: 1200px;
+            width: 100%;
+            max-width: 500px;
             padding: 20px;
-            justify-content: center; 
-        }
-
-        .column {
-            flex: 1;
-            min-width: 0;
-            padding: 20px;
-            text-align: justify;
             box-sizing: border-box;
         }
 
-        @media (min-width: 1025px) {
-            .column {
-                flex-basis: calc(33.333% - 40px); 
-                max-width: none;
-            }
-            
-            .container > .column:nth-child(1) { order: 1; }
-            .container > .column:nth-child(2) { order: 2; }
-            .container > .column:nth-child(3) { order: 3; }
-            .container > .column:nth-child(4) { order: 4; } 
-            .container > .column:nth-child(5) { order: 5; }
-            .container > .column:nth-child(6) { order: 6; }
+        .column {
+            margin-bottom: 20px;
+            text-align: left;
         }
 
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .container {
-                align-items: flex-start; 
-            }
-
-            .column {
-                flex-basis: calc(50% - 40px);
-                max-width: none;
-            }
-            
-            .container > .column:nth-child(4) {
-                order: 2;
-            }
-            
-            .container > .column:nth-child(2) {
-                order: 3;
-            }
-            
-            .container > .column:nth-child(3) {
-                order: 4;
-            }
-            
-            .container > .column:nth-child(5) {
-                order: 5;
-            }
-            
-            .container > .column:nth-child(6) {
-                order: 6;
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                align-items: flex-start;
-                padding: 20px;
-            }
-
-            .container {
-                flex-direction: column;
-                width: 80%;
-                max-width: 600px;
-                margin: 20px auto;
-                padding: 20px;
-            }
-
-            .column {
-                width: 100%;
-                max-width: none;
-                order: 6;
-            }
-            
-            .container > .column:nth-child(1) { order: 1; }
-            .container > .column:nth-child(2) { order: 2; }
-            .container > .column:nth-child(3) { order: 3; }
-            .container > .column:nth-child(5) { order: 4; }
-            .container > .column:nth-child(6) { order: 5; }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                width: 95%;
-                padding: 10px;
-            }
-
-            .column {
-                padding: 10px;
-            }
+        .column:last-child {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -121,9 +38,9 @@
     <div class="container">
         <div class="column">
             <p style="color: navy; font-size: 22px; margin-bottom: 0;"><i>Vienna Analytics</i></p>
-            <p style="color: grey; font-size: 14px; margin-top: 2;"><i>AI consultancy and deployment</i></p>
+            <p style="color: grey; font-size: 14px; margin-top: 2; margin-bottom: 0;"><a href="contact.html" style="text-decoration: none; color: navy; margin-top: 2;">Contact</a><a href="portfolio.html" style="text-decoration: none; color: navy; margin-top: 2;">Portfolio</a></p>
             <br>
-            <a href="contact.html" class="button" style="text-decoration: none; color: navy;">Contact</a> 
+            
         </div>
         <div class="column">
             <p>Deploying AI is the most impactful action a company can undertake in our time, offering transformative potential unseen since the advent of the internet. Adoption is no longer optional but essential for competitiveness; those who hesitate risk being outmaneuvered and becoming competitively irrelevant.</p>
@@ -132,7 +49,7 @@
             <p>We are architects of the future of business, engineering and deploying AI systems delivering performance and efficiency. We engineer smarter operations and decision-making, future proofing your business systems. Our consultancy provides strategic guidance to companies looking to secure a competitive advantage.</p>
         </div>
         <div class="column">
-            
+
         </div>
         <div class="column">
             <p>Our commitment to delivering truly exceptional outcomes necessitates a focused approach. By intentionally limiting the number of clients we partner with each year, we ensure that each engagement receives the undivided attention, dedicated resources, and deep expertise required to achieve extraordinary results.</p>
