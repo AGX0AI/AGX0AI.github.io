@@ -2,3 +2,9 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
+
+h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    font-weight: 200;
+}
