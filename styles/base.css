@@ -1,10 +1,71 @@
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
+.middle-column-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    min-height: 100vh;     
+    margin: 0;             
 }
 
-h2 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 28px;
-    font-weight: 200;
+.middle-column { 
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    padding-top:10px;
+    padding-bottom:22px;
+    text-align: justify;
+}
+
+.title {
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    padding-top:10px;
+    padding-bottom:22px;
+}
+
+.panel {
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    width: 500px;
+    margin-top: 20spx;   
+    padding-top:10px;
+    padding-left:14px;
+    padding-bottom:12px;
+    box-sizing: border-box;
+}
+
+
+.panel-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.panel-subtitle {
+    font-family: 'Inter', sans-serif;
+    color: grey;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 3px;   
+}
+
+.panel-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
 }
