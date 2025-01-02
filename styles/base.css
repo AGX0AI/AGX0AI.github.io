@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'Font';
-    src: url('../fonts/font.woff2') format('woff2');
-}
-  
 .middle-column-wrapper {
     display: flex;
     justify-content: center;
@@ -15,23 +10,20 @@
     padding: 20px;
     border-radius: 10px;
     width: 100%;
+    font-family: "Roboto Mono", serif;
     text-transform: uppercase;
     font-size: 12px;
-    font-weight: 100;
+    font-weight: 500;
     -webkit-font-smoothing: antialiased;
 }
 
 .title {
     color: black;
-    font-family: 'Font';
-
 }
 
 .text {
-    font-family: 'Font';
     padding-top: 18px;
     text-align: left;
-    
 }
 
 .panel {
@@ -47,19 +39,16 @@
 }
 
 
-.panel-title {
-    font-family: 'Font';
-    
-}
+
 
 .panel-subtitle {
-    font-family: 'Font';
+
     color: grey;
     margin-top: 3px;   
 }
 
 .panel-text {
-    font-family: 'Font';
+
     margin-top: 10px;
     text-align: left;    
 
