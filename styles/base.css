@@ -87,5 +87,11 @@
     padding-top: 4px
 }
 
+
+this is the code for the text that is inverted
+    color: #000000;
+            filter: invert(1);
+            mix-blend-mode: difference;
+        
 */
 
